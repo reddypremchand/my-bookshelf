@@ -24,10 +24,11 @@ const Bookshelf = ({ setProgress }) => {
         <div className="bookshelf">
             <h1>My Bookshelf</h1>
             <div className="book-container">
-                {bookshelf.map((book) => (
-                    <div key={book.key} className="book-card">
+                {bookshelf.map((book, index) => (
+                    <div key={index} className="book-card">
                         <h3>{book.title}</h3>
                         <p>Author: {book.author_name ? book.author_name.join(', ') : 'N/A'}</p>
+                        <p>Edition: {book.edition_count}</p>
                         <button onClick={() => openBookDetails(book)}>Show Details</button>
                     </div>
                 ))}

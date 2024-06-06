@@ -14,6 +14,7 @@ const BookCard = ({ book, addToBookshelf, isInBookshelf }) => {
             <h3 className="book-title">{book.title}</h3>
             <p className="book-author">Author: {book.author_name}</p>
             <p className="book-publisher">Publisher: {book.publisher}...</p>
+            <p className="book-edition">Edition: {book.edition_count}</p>
             {isInBookshelf || addedToBookshelf ? (
                 <button className="added-button" disabled>Added in Bookshelf</button>
             ) : (
