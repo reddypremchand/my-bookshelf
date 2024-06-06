@@ -1,0 +1,77 @@
+/* Navbar.css */
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick it to the top of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.links {
+    
+    
+   
+    display: flex;
+    
+   
+    padding: 10px 20px;
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick it to the top of the viewport */
+    z-index: 1000;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #ffd700;
+}
+
+.toggle-button {
+    cursor: pointer;
+    display: none; /* Initially hide the toggle button */
+}
+
+.toggle-button span {
+    font-size: 24px;
+}
+
+/* Show links when toggle button is clicked */
+.links.show {
+    display: flex;
+}
+
+/* Show toggle button on smaller screens */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+    }
+
+    .links {
+        display: none; /* Initially hide the links on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust this value as needed */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .links.show {
+        display: flex; /* Show links when toggle button is clicked */
+    }
+
+    .links a {
+        margin: 10px 0;
+    }
+}
